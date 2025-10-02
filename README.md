@@ -43,9 +43,6 @@ Clean, professional typography.
 🚀 Deployment and Local Setup
 This is a static site and can be hosted on any platform that serves HTML/CSS/JS files.
 
-Viewing the Live Site
-(Insert your live deployment link here)
-
 Running Locally
 Clone the repository:
 

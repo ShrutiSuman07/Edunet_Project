@@ -50,7 +50,7 @@ Viewing the Live Site
 Running Locally
 Clone the repository:
 
-git clone 
+git clone https://github.com/ShrutiSuman07/Edunet_Project
 
 Navigate to the project directory:
 

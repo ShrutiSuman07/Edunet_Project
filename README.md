@@ -69,4 +69,5 @@ Theming: Adding a Dark/Light Mode toggle switch for user preference.
 CMS Integration: Connecting to a headless CMS (like Strapi or Contentful) for non-technical content updates.
 
 Developed by: Shruti Suman
+
 Connect with me on LinkedIn | View more projects on GitHub.

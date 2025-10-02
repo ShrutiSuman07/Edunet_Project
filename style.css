@@ -1,0 +1,227 @@
+/* GLOBAL RESETS AND TYPOGRAPHY */
+:root {
+    --primary-color: #007BFF; /* Blue */
+    --secondary-color: #343a40; /* Dark Gray */
+    --light-bg: #f8f9fa; /* Light Background */
+    --dark-bg: #212529; /* Dark Background */
+    --text-light: #f8f9fa;
+    --text-dark: #343a40;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* smooth is handled by GSAP's ScrollToPlugin, but this is a good fallback */
+    scroll-behavior: smooth; 
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--light-bg);
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll from animations */
+}
+
+/* HEADER AND NAVIGATION */
+.header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--secondary-color);
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+/* SECTION STYLING */
+.section {
+    padding: 8rem 2rem;
+    min-height: 100vh; /* Ensures sections fill viewport for better visual flow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.section-dark {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+}
+
+.section-content {
+    max-width: 800px;
+    width: 100%;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+/* HERO SECTION */
+.hero-section {
+    background-color: var(--light-bg);
+    padding-top: 10rem;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+/* SKILLS GRID */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.skill-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-light);
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-weight: 400;
+}
+
+/* PROJECTS GRID */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.project-card {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.project-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* CONTACT SECTION */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--text-dark);
+}
+
+.social-links {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.social-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin: 0 0.5rem;
+    transition: color 0.3s;
+}
+
+.section-dark .social-links a {
+    color: var(--text-light);
+}
+
+/* FOOTER */
+.footer {
+    padding: 1.5rem 2rem;
+    background-color: var(--secondary-color);
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+}
+
+/* ----------------------------------------------- */
+/* GSAP ANIMATION CLASSES (Initial states for JS)  */
+/* ----------------------------------------------- */
+.animate-on-scroll {
+    /* REMOVED: opacity: 0; */
+    /* Only define transform here. GSAP will handle the initial opacity: 0 and y: 50 */
+    transform: translate3d(0, 50px, 0); 
+    /* Optimization for smooth animation */
+    will-change: transform, opacity; 
+}

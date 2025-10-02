@@ -1,4 +1,5 @@
 Dynamic Developer Portfolio (Shruti Suman)
+
 🌟 Project Overview
 This repository hosts a personal developer portfolio designed to provide a dynamic, high-performance, and professionally engaging representation of my skills, projects, and professional background. It serves as a centralized hub, moving beyond static resumes to showcase interactive front-end development capabilities.
 
@@ -49,7 +50,7 @@ Viewing the Live Site
 Running Locally
 Clone the repository:
 
-git clone [Your Repository URL]
+git clone 
 
 Navigate to the project directory:
 

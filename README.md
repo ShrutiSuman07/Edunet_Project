@@ -16,8 +16,7 @@ Project Showcase: Direct links and summaries for featured work, including the Ju
 
 Professional Contact: Clear paths to connect via email, LinkedIn, GitHub, and YouTube.
 
-🛠️ Technology Stack
-Technology
+🛠️  Stack Technology
 
 Purpose
 
